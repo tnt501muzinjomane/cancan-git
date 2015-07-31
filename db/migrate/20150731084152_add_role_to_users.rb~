@@ -1,0 +1,15 @@
+class AddRoleToUsers < ActiveRecord::Migration
+  def change
+    add_column :users, :role, :string
+
+    User.reset_column_information
+
+    User.all.each do |u|
+    u.role = 'role'
+    
+    u.save
+  end
+  end
+end
+
+

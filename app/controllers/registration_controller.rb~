@@ -1,0 +1,7 @@
+class Devise::RegistrationsController < DeviseController
+
+  def registration_params
+      params.require(:registration).permit(:title, :description, :tag,:tag_Id, :category_id, :user_id)
+    end
+
+end

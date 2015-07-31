@@ -1,0 +1,4 @@
+<br>
+<br>
+<%= high_chart("some_id", @chart) %>
+<br>
